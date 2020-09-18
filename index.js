@@ -1,13 +1,10 @@
 const express = require("express");
 const request = require("request");
-
 const app = express();
-
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
 });
-
 app.get("/api/users", (req, res) => {
   request(
     {
@@ -23,6 +20,6 @@ app.get("/api/users", (req, res) => {
     }
   );
 });
-
 const PORT = process.env.PORT || 3000;
+console.log(PORT);
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
