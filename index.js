@@ -22,4 +22,5 @@ app.get("/api/users", (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 console.log(PORT);
+console.log("second port change", PORT);
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
